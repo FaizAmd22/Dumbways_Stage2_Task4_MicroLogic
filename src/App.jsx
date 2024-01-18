@@ -1,20 +1,37 @@
-import './App.css'
-import {GlobalContext} from "./context"
-import { RouterProvider } from 'react-router-dom'
-import {router} from "./routers"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/navbar'
+import Convert from './pages/convert'
+import Countdown from './pages/countdown'
+import Home from './pages/home'
+import ListML from './pages/list_ml'
+import Matching from './pages/matching'
+import NotFound from './pages/notFound'
+import Salary from './pages/salary'
+import Scramble from './pages/scramble'
+import Tictactoe from './pages/tictactoe'
 
 function App() {
-  const user = {
-    username: "Faizhal"
-  }
+  const location = window.location.pathname
+  console.log(location)
+  const hideNavbar = location === '/'
 
   return (
-
-    <div className="App">
-      <GlobalContext.Provider value={user}>
-        <RouterProvider router={router} />
-      </GlobalContext.Provider>
-    </div>
+    <Router>
+      <div className='flex flex-col md:flex-row'>
+        {!hideNavbar && <Navbar />}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/countdown' element={<Countdown />} />
+          <Route path='/convert' element={<Convert />} />
+          <Route path='/list-ml' element={<ListML />} />
+          <Route path='/tictactoe' element={<Tictactoe />} />
+          <Route path='/matching-card' element={<Matching />} />
+          <Route path='/salary-calc' element={<Salary />} />
+          <Route path='/word-scramb' element={<Scramble />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
