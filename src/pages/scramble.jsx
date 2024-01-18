@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const ScrambleWordGame = () => {
+const Scramble = () => {
     const words = ['react', 'javascript', 'laravel', 'frontend', 'backend', 'tailwind'];
 
     const [original, setOriginal] = useState('');
@@ -59,4 +59,4 @@ const ScrambleWordGame = () => {
     );
 };
 
-export default ScrambleWordGame;
+export default Scramble;
