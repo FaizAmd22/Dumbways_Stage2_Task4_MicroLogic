@@ -1,36 +1,5 @@
 {
-    "routes": [
-        {
-            "src": "/",
-            "dest": "/"
-        },
-        {
-            "src": "/countdown",
-            "dest": "/"
-        },
-        {
-            "src": "/convert",
-            "dest": "/"
-        },
-        {
-            "src": "/list-ml",
-            "dest": "/"
-        },
-        {
-            "src": "/tictactoe",
-            "dest": "/"
-        },
-        {
-            "src": "/matching-card",
-            "dest": "/"
-        },
-        {
-            "src": "/salary-calc",
-            "dest": "/"
-        },
-        {
-            "src": "/word-scramb",
-            "dest": "/"
-        }
+    "rewrites": [
+        {"source": "/(*)", "destination": "/"}
     ]
 }
