@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import { posts, postById } from "../apis/loader";
 import Convert from "../pages/convert";
 import Countdown from "../pages/countdown";
 import Home from "../pages/home";
@@ -19,12 +18,10 @@ export const router = createBrowserRouter([
             {
                 path: "/countdown",
                 element: <Countdown />,
-                loader: posts
             },
             {
                 path: "/convert",
                 element: <Convert />,
-                loader: postById
             },
             {
                 path: "/list-ml",
