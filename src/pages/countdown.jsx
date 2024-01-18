@@ -64,8 +64,8 @@ function Countdown() {
     }
 
     return (
-        <div className='w-[80vw] h-[100vh] flex justify-center items-center'>
-            <div className='w-[90%] border-2 rounded-xl p-10 flex flex-col text-center gap-10'>
+        <div className='md:w-[80vw] h-[100vh] flex justify-center items-center'>
+            <div className='w-[90%] xl:w-[60%] border-2 rounded-xl p-10 flex flex-col text-center gap-10'>
                 <h2 className='font-bold text-3xl mb-10 pt-10 md:pt-0'>Countdown Timer</h2>
 
                 <div className='grid grid-cols-2'>

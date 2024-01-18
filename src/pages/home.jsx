@@ -4,10 +4,10 @@ const Home = () => {
     return ( 
         <div className="container h-screen m-auto flex flex-col items-center py-10">
             <div className="flex flex-col justify-center items-center h-[20vh]">
-                <h1 className="font-bold uppercase text-2xl">Challange on Task</h1>
+                <h1 className="font-bold uppercase text-4xl">Challange on Task</h1>
                 <div className="flex items-center gap-1">
                     <p>Just try one by one!</p>
-                    <BsFire className="text-orange-400"/>
+                    <BsFire className="text-orange-500"/>
                 </div>
             </div>
 
@@ -15,7 +15,7 @@ const Home = () => {
                 {Datas.map((data, index) => {
                     return (
                         <a
-                            className="w-[40%] md:w-[25%] lg:w-[20%] h-[300px] lg:h-[350px] shadow-lg rounded-lg shadow-gray-400 cursor-pointer flex flex-col items-center justify-center text-center hover:bg-gray-700 hover:text-white transition-all duration-500 ease-in-out group p-5"
+                            className="w-[40%] md:w-[25%] lg:w-[20%] h-[300px] lg:h-[300px] shadow-lg rounded-lg shadow-gray-400 cursor-pointer flex flex-col items-center justify-center text-center hover:bg-gray-700 hover:text-white transition-all duration-500 ease-in-out group p-5"
                             key={index}
                             href={data.path}
                         >

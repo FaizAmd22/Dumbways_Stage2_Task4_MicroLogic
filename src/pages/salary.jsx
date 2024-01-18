@@ -18,8 +18,8 @@ const Salary = () => {
     }
 
     return (
-        <div className="w-[80vw] h-[100vh] m-auto flex justify-center items-center">
-            <div className="w-[90%] border-2 rounded-xl p-10 xl:p-20 flex flex-col text-center gap-10">
+        <div className="md:w-[80vw] h-[100vh] m-auto flex justify-center items-center">
+            <div className="w-[100%] md:w-[90%] border-2 rounded-xl p-10 xl:p-20 flex flex-col text-center gap-10">
                 <h1 className="font-bold text-3xl">Salary Calculating</h1>
 
                 <div className="grid grid-cols-2 gap-10 md:gap-0">
@@ -41,18 +41,18 @@ const Salary = () => {
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col text-start gap-3 col-span-2 md:col-span-1 order-1">
+                    <div className="w-full flex flex-col text-start gap-5 col-span-2 md:col-span-1 order-1">
                         <label>
                             <p className="pl-3 font-semibold pb-1">Salary :</p>
-                            <input type="number" placeholder="Input here" className="w-full shadow-lg shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setSalary(e.target.value)} />
+                            <input type="number" placeholder="Input here" className="w-full shadow-md shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setSalary(e.target.value)} />
                         </label>
                         <label>
                             <p className="pl-3 font-semibold pb-1">Allowance :</p>
-                            <input type="number" placeholder="Input here" className="w-full shadow-lg shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setAllowance(e.target.value)} />
+                            <input type="number" placeholder="Input here" className="w-full shadow-md shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setAllowance(e.target.value)} />
                         </label>
                         <label>
                             <p className="pl-3 font-semibold pb-1">Required Costs :</p>
-                            <input type="number" placeholder="Input here" className="w-full shadow-lg shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setCosts(e.target.value)} />
+                            <input type="number" placeholder="Input here" className="w-full shadow-md shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setCosts(e.target.value)} />
                         </label>
 
                         <button className="bg-blue-500 mt-5 rounded-2xl text-white font-semibold py-1 hover:bg-white hover:text-blue-500 hover:shadow-lg transition-all duration-500 ease-in-out" onClick={handleSubmit}>

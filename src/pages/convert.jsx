@@ -39,48 +39,53 @@ const Convert = () => {
 
   const handleFromCurrencyChange = (e) => {
     setFromCurrency(e.target.value);
+    setConvert(null)
   };
 
   const handleToCurrencyChange = (e) => {
     setToCurrency(e.target.value);
+    setConvert(null)
   };
 
   return (
-    <div className='w-[80vw] h-[100vh] flex justify-center items-center'>
-      <div className='w-[90%] border-2 rounded-xl p-20 flex flex-col text-center gap-10'>
-      <h2 className='font-bold text-3xl'>Currency Converter</h2>
+    <div className='md:w-[80vw] h-[100vh] flex justify-center items-center'>
+      <div className='w-[90%] lg:w-[60%] border-2 rounded-xl p-20 flex flex-col text-center gap-10'>
+        <h2 className='font-bold text-3xl'>Currency Converter</h2>
 
-      <div>
-        <input type="number" value={amount} placeholder="Input Amount Here" onChange={handleAmountChange} className="w-full shadow-lg shadow-gray-300 pl-5 pr-16 py-2 rounded-3xl" />
-      </div>
-
-      <div className='w-full flex justify-evenly items-center font-bold'>
-        <select value={fromCurrency} onChange={handleFromCurrencyChange} className="bg-gray-500 text-white p-2 rounded-lg cursor-pointer">
-          {currencies.map((currency) => (
-            <option key={currency} value={currency}>
-              {currency}
-            </option>
-          ))}
-        </select>
-
-        <p>To</p>
-
-        <select value={toCurrency} className="bg-gray-500 text-white p-2 rounded-lg cursor-pointer" onChange={handleToCurrencyChange}>
-          {currencies.map((currency) => (
-            <option key={currency} value={currency}>
-              {currency}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <button onClick={convertCurrency} className="bg-blue-500 text-white px-10 py-2 rounded-lg hover:bg-white hover:text-blue-500 hover:shadow-xl transition-all duration-500 ease-in-out font-bold">Convert</button>
-      {convert && (
-        <p className='w-full border-2'>
-          {convert} {toCurrency}
-        </p>
-        )}
+        <div>
+          <input type="number" value={amount} placeholder="Input Amount Here" onChange={handleAmountChange} className="w-full shadow-md shadow-gray-300 pl-5 pr-16 py-2 rounded-3xl" />
         </div>
+
+        <div className='w-full flex justify-evenly items-center font-bold'>
+          <select value={fromCurrency} onChange={handleFromCurrencyChange} className="bg-gray-500 text-white p-2 rounded-lg cursor-pointer">
+            {currencies.map((currency) => (
+              <option key={currency} value={currency}>
+                {currency}
+              </option>
+            ))}
+          </select>
+
+          <p>To</p>
+
+          <select value={toCurrency} className="bg-gray-500 text-white p-2 rounded-lg cursor-pointer" onChange={handleToCurrencyChange}>
+            {currencies.map((currency) => (
+              <option key={currency} value={currency}>
+                {currency}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <button onClick={convertCurrency} className="bg-blue-500 text-white px-10 py-2 rounded-lg hover:bg-white hover:text-blue-500 hover:shadow-xl transition-all duration-500 ease-in-out font-bold">Convert</button>
+
+
+        <div className='font-semibold '>
+          <p className='mb-1'>Result :</p>
+          <p className='w-full h-[40px] border-2 border-gray-300 rounded-lg flex justify-center items-center'>
+            {convert && (<p>{convert} {toCurrency}</p>)}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
