@@ -13,35 +13,35 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
-        errorElement: <NotFound />,
+        errorElement: NotFound(),
         children: [
             {
                 path: "/countdown",
-                element: <Countdown />,
+                element: Countdown(),
             },
             {
                 path: "/convert",
-                element: <Convert />,
+                element: Convert(),
             },
             {
                 path: "/list-ml",
-                element: <ListML />
+                element: ListML()
             },
             {
                 path: "/tictactoe",
-                element: <Tictactoe />
+                element: Tictactoe()
             },
             {
                 path: "/matching-card",
-                element: <Matching />
+                element: Matching()
             },
             {
                 path: "/salary-calc",
-                element: <Salary />
+                element: Salary()
             },
             {
                 path: "/word-scramb",
-                element: <Scramble />
+                element: Scramble()
             }
         ]
     },
