@@ -1,44 +1,44 @@
 import { useState, useEffect } from 'react';
 
 const Scramble = () => {
-    const words = ['react', 'javascript', 'laravel', 'frontend', 'backend', 'tailwind'];
+    const words = ['react', 'javascript', 'laravel', 'frontend', 'backend', 'tailwind']
 
-    const [original, setOriginal] = useState('');
-    const [scrambled, setScrambled] = useState('');
-    const [userInput, setUserInput] = useState('');
-    const [score, setScore] = useState(0);
+    const [original, setOriginal] = useState('')
+    const [scrambled, setScrambled] = useState('')
+    const [userInput, setUserInput] = useState('')
+    const [score, setScore] = useState(0)
 
     useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * words.length);
-        const selectedWord = words[randomIndex];
+        const randomIndex = Math.floor(Math.random() * words.length)
+        const selectedWord = words[randomIndex]
 
-        setOriginal(selectedWord);
-        setScrambled(scramble(selectedWord));
-    }, []);
+        setOriginal(selectedWord)
+        setScrambled(scramble(selectedWord))
+    }, [])
 
     const scramble = (word) => {
-        const scrambledArray = word.split('').sort(() => Math.random() - 0.5);
-        return scrambledArray.join('');
-    };
+        const scrambledArray = word.split('').sort(() => Math.random() - 0.5)
+        return scrambledArray.join('')
+    }
 
     const handleInputChange = (e) => {
-        setUserInput(e.target.value);
-    };
+        setUserInput(e.target.value)
+    }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const isCorrectGuess = userInput.toLowerCase() === original;
-        const randomIndex = Math.floor(Math.random() * words.length);
-        const selectedWord = words[randomIndex];
+        e.preventDefault()
+        const isCorrectGuess = userInput.toLowerCase() === original
+        const randomIndex = Math.floor(Math.random() * words.length)
+        const selectedWord = words[randomIndex]
 
         if (isCorrectGuess) {
-            setScore((prevScore) => prevScore + 1);
+            setScore((prevScore) => prevScore + 1)
         }
 
-        setOriginal(selectedWord);
-        setScrambled(scramble(selectedWord));
-        setUserInput('');
-    };
+        setOriginal(selectedWord)
+        setScrambled(scramble(selectedWord))
+        setUserInput('')
+    }
 
 
     return (
@@ -57,6 +57,6 @@ const Scramble = () => {
             </div>
         </div>
     );
-};
+}
 
 export default Scramble;

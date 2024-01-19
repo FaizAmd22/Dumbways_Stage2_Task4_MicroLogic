@@ -76,7 +76,7 @@ const Tictactoe = () => {
                 Restart
             </button>
         </div>
-    )
+    );
 }
 
 const winCondition = (squares) => {

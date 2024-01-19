@@ -101,7 +101,7 @@ function Countdown() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Countdown;
