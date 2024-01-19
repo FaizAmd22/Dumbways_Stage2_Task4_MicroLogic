@@ -24,7 +24,7 @@ const Salary = () => {
 
                 <div className="grid grid-cols-2 gap-10 md:gap-0">
                     <div className="flex flex-col justify-center items-start col-span-2 md:col-span-1 order-2 md:order-1">
-                        <p className="font-bold text-xl pb-3">Hasil</p>
+                        <p className="font-bold text-xl pb-3">Result</p>
 
                         <div className="flex text-start gap-2">
                             <div>

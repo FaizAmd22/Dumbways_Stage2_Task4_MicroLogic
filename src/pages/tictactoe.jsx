@@ -27,7 +27,7 @@ const Tictactoe = () => {
     const renderSquare = (index) => (
         <button
             className={`w-[80px] h-[80px] square ${board[index] === 'X' ? 'bg-blue-500' : board[index] === 'O' ? 'bg-yellow-400' : 'bg-gray-200'
-                } hover:bg-gray-300 text-xl font-bold focus:outline-none`}
+                } ${!board[index] ? 'hover:bg-gray-300' : 'cursor-default'} text-xl font-bold focus:outline-none`}
             onClick={() => handleClick(index)}
         >
             {board[index]}

@@ -1,5 +1,6 @@
 import { BsFire } from "react-icons/bs";
 import Datas from "../data/homeCards.json"
+
 const Home = () => {
     return ( 
         <div className="container h-screen m-auto flex flex-col items-center py-10">
