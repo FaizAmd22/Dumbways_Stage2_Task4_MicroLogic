@@ -51,7 +51,7 @@ const Salary = () => {
                             <input type="number" placeholder="Input here" className="w-full shadow-md shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setAllowance(e.target.value)} />
                         </label>
                         <label>
-                            <p className="pl-3 font-semibold pb-1">Required Costs :</p>
+                            <p className="pl-3 font-semibold pb-1">Tax :</p>
                             <input type="number" placeholder="Input here" className="w-full shadow-md shadow-gray-300 rounded-2xl pl-5 py-1" onChange={(e) => setCosts(e.target.value)} />
                         </label>
 
