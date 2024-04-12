@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../assets/loading.svg";
 import { IoFilterOutline } from "react-icons/io5";
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 // function classNames(...classes) {
