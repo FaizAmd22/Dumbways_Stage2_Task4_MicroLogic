@@ -7,7 +7,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center h-[20vh]">
                 <h1 className="font-bold uppercase text-4xl">Challange on Task</h1>
                 <div className="flex items-center gap-1">
-                    <p>Just try one by one!</p>
+                    <p>Just try it one by one!</p>
                     <BsFire className="text-orange-500"/>
                 </div>
             </div>
@@ -21,7 +21,7 @@ const Home = () => {
                             href={data.path}
                         >
                             <div className="h-[50%] flex items-center mb-5">
-                                <img src={data.image} alt={data.title} className="min-h-[30%] max-h-[100%] hover:transition-all hover:duration-500 hover:ease-in-out"/>
+                                <img src={data.image} alt={data.title} className="min-h-[30%] max-h-[100%] rounded-lg hover:transition-all hover:duration-500 hover:ease-in-out"/>
                             </div>
 
                             <div>
